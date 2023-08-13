@@ -2,7 +2,7 @@
 <html>
   <head>
     <title>ASCII Converter</title>
-    <meta name="viewport" content="widt=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta charset="UTF-8" />
     <link rel="stylesheet" href="/src/styles.css" />
   </head>
@@ -11,7 +11,7 @@
     <div class="app">
       <canvas id="canvas1"></canvas>
       <div class="controls">
-        <label for="resolution" id="resolutionLabel">Res</label>
+        <label for="resolution" id="resolutionLabel">R</label>
         <input
           type="range"
           id="resolution"
@@ -22,7 +22,11 @@
         />
       </div>
     </div>
-    <script src="src/index.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@svgdotjs/svg.js@latest/dist/svg.min.js"></script>
+    <script type="module" src="src/index.js"></script>
+    <script type="module" src="src/asciiEffect.js"></script>
+    <script
+      type="module"
+      src="https://cdn.jsdelivr.net/npm/@svgdotjs/svg.js@latest/dist/svg.min.js"
+    ></script>
   </body>
 </html>

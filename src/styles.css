@@ -11,18 +11,20 @@ body {
 }
 
 #canvas1 {
-  border: 5px solid white;
+  border: 2px solid white;
 }
 
 .controls {
   color: wheat;
   display: flex;
-  padding: 4px;
+  background: gray;
+  justify-content: space-around;
+  padding: 2px;
 }
 .controls > input {
-  width: 70%;
+  width: 60%;
 }
 .controls > label {
   width: 25%;
-  font-size: 15px;
+  font-size: 14px;
 }
