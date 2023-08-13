@@ -16,14 +16,15 @@ const inputSlider = document.getElementById("resolution");
 const inputLabel = document.getElementById("resolutionLabel");
 inputSlider.addEventListener("change", handleSlider);
 console.log(inputLabel);
+
 let effect;
 
 function handleSlider() {
   if (inputSlider.value == 1) {
-    inputLabel.innerHtml = "Original Image";
+    inputLabel.innerText = "Original";
     ctx.drawImage(image1, 0, 0, canvas.width, canvas.height);
   } else {
-    inputLabel.innerHtml = inputSlider.value;
+    inputLabel.innerText = "Res" + " " + inputSlider.value + "px";
     ctx.font = parseInt(inputSlider.value) * 1.5 + "px Veranda";
     effect.draw(parseInt(inputSlider.value));
   }

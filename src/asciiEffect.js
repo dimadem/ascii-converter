@@ -8,13 +8,15 @@ class Cell {
     this.color = color;
   }
   draw(ctx) {
-    ctx.fillStyle = "white";
+    //shadow
+    ctx.fillStyle = "gray";
     ctx.fillText(this.symbol, this.x + 0.5, this.y + 0.5);
+    //symbols
     ctx.fillStyle = this.color;
     ctx.fillText(this.symbol, this.x, this.y);
   }
 }
-
+let density;
 class AsciiEffect {
   // # - private methods
   #imageCellArray = [];
@@ -32,6 +34,8 @@ class AsciiEffect {
     this.#pixels = this.#ctx.getImageData(0, 0, this.#width, this.#height);
   }
 
+  density = "@1234567890-=.,";
+  // symbols
   #convertToSymbol(g) {
     if (g > 250) return "@";
     else if (g > 240) return "*";
@@ -57,7 +61,9 @@ class AsciiEffect {
           const blue = this.#pixels.data[pos + 2];
           const total = red + green + blue;
           const averageColorValue = total / 3;
+          //! color rgb
           const color = "rgb(" + red + "," + green + "," + blue + ")";
+          //! color gray
           // const color =
           //   "rgb(" +
           //   averageColorValue +
